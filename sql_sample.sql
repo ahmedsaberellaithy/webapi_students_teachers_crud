@@ -26,17 +26,17 @@ ELSE
 	PRINT 'Students Table Exists'
 
 IF  NOT EXISTS (SELECT * FROM sys.objects 
-WHERE object_id = OBJECT_ID(N'[dbo].[Teachers]') AND type in (N'U'))
+WHERE object_id = OBJECT_ID(N'[dbo].[Teacher]') AND type in (N'U'))
 
 BEGIN
-CREATE TABLE [dbo].[Teachers] (
+CREATE TABLE [dbo].[Teacher] (
     [Id]        INT           IDENTITY (1, 1) NOT NULL,
     [firstname] NVARCHAR (50) NOT NULL,
     [lastname]  NVARCHAR (50) NOT NULL,
     PRIMARY KEY CLUSTERED ([Id] ASC)
 );
 
-INSERT INTO [dbo].[Teachers] ([firstname], [lastname]) VALUES
+INSERT INTO [dbo].[Teacher] ([firstname], [lastname]) VALUES
 	('sanders', 'daniel'),
 	('daniel', 'sanders'),
 	('daniel', 'mark'),

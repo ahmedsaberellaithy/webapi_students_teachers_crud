@@ -22,4 +22,6 @@ email: ahmedsaber.1992@gmail.com
         expected request body {"Id":0 ,"firstname": "ahmed","lastname": "saber"}
     - (DELETE) localhost:${activePort}/api/teacher/${Id} 
 
-### For sql queries to add new entries please check the added file to the repo sql_sample.sql with the tables crea
+### For sql queries to add new entries and define tables
+    - please create an sql db under the name `students_teachers`
+    - please check the queies in file `sql_sample.sql` with the tables creating queries and sample data
